@@ -1,18 +1,28 @@
 # vim
 
 How to install Vundle on Windows 10:
-1. Install git
-2. Install curl
-3. Install Vundle
-Vundle Quick Start page
-https://github.com/VundleVim/Vundle.vim#quick-start
+1. Install Vim
+   * Download link: https://vim.sourceforge.io/download.php#pc
+   * $VIM is where your vim is installed. Normally it's "c:\Program Files (x86)\Vim". However, it's better to have your vim installed at "c:\vim" to avoid permission issues.
+   
+2. Install git Windows version
+   * Download link: https://git-scm.com/downloads
+   
+3. Install Vundle by using git
+   * cd c:\vim
+   * git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+   * (Vundle Quick Start page https://github.com/VundleVim/Vundle.vim#quick-start)
 
-Replace:
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+4. Edit $VIM/_vimrc (this is equilavent to .vimrc in *NIX system)
+   * Replace:
+   set rtp+=~/.vim/bundle/Vundle.vim
+   call vundle#begin()
+   * With: set rtp+=$VIM/vimfiles/bundle/Vundle.vim/ call vundle#begin('$VIM/vimfiles/bundle/')
+   
+5. Initialize Vundle in Vim/gVim:
+   * Launch Vim/gVim
+   * :PluginInstall
+   
+Enjoy it!
 
-With:
-set rtp+=$VIM/vimfiles/bundle/Vundle.vim/
-call vundle#begin('$VIM/vimfiles/bundle/')
 
-$VIM is "c:\Program Files (x86)\Vim"
