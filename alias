@@ -1,0 +1,8 @@
+alias ls='ls --color=auto'
+alias g='gvim -p'
+alias c='clear'
+alias q='exit'
+alias h='history'
+alias chrome='google-chrome'
+alias gs='git status'
+
