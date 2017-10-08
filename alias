@@ -7,5 +7,5 @@ alias h='history'
 alias chrome='google-chrome'
 alias gs='git status'
 alias gd='git difftool --tool=meld -y'
-alias gd='git difftool --tool=meld -d'
+alias gdd='git difftool --tool=meld -d'
 
