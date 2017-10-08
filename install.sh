@@ -57,5 +57,3 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 wget https://raw.githubusercontent.com/wadechang/DMI/master/vimrc -O ~/.vimrc
 vim +PluginInstall +qall
 
-# Install pip
-
