@@ -5,4 +5,5 @@ alias q='exit'
 alias h='history'
 alias chrome='google-chrome'
 alias gs='git status'
+alias rm='rm -i'
 
