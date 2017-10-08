@@ -29,8 +29,8 @@ Plugin 'nvie/vim-flake8'
 
 # Color schemes
 Plugin 'chriskempson/base16-vim'
-#Plugin 'altercation/vim-colors-solarized'
-#Plugin 'dracula/vim'
+"Plugin 'altercation/vim-colors-solarized'
+"Plugin 'dracula/vim'
 "Plugin 'vim-scripts/phd'
 "Plugin 'junegunn/seoul256.vim'
 "Plugin 'romainl/Apprentice'
