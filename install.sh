@@ -17,11 +17,6 @@ echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sud
 sudo apt-get update
 sudo apt-get install google-chrome-stable
 
-# Install Python 3.6
-sudo add-apt-repository ppa:jonathonf/python-3.6
-sudo apt update
-sudo apt install python3.6
-
 # Install Node.js 
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
@@ -59,6 +54,34 @@ wget https://raw.githubusercontent.com/wadechang/DMI/master/vimrc -O ~/.vimrc
 vim +PluginInstall +qall
 
 # Set git global ignore file
-echo "tags" >> ~/.global_ignore
-git config --global core.excludesfile ~/.global_ignore
+wget https://raw.githubusercontent.com/github/gitignore/master/Ruby.gitignore
+wget https://raw.githubusercontent.com/github/gitignore/master/Rust.gitignore
+wget https://raw.githubusercontent.com/github/gitignore/master/Swift.gitignore
+wget https://raw.githubusercontent.com/github/gitignore/master/TeX.gitignore
+wget https://raw.githubusercontent.com/github/gitignore/master/VisualStudio.gitignore
+wget https://raw.githubusercontent.com/github/gitignore/master/CUDA.gitignore
+wget https://raw.githubusercontent.com/github/gitignore/master/Elixir.gitignore
+wget https://raw.githubusercontent.com/github/gitignore/master/Erlang.gitignore
+wget https://raw.githubusercontent.com/github/gitignore/master/Go.gitignore
+wget https://raw.githubusercontent.com/github/gitignore/master/Java.gitignore
+wget https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore
+wget https://raw.githubusercontent.com/github/gitignore/master/Objective-C.gitignore
+wget https://raw.githubusercontent.com/github/gitignore/master/Python.gitignore
+wget https://raw.githubusercontent.com/github/gitignore/master/Rails.gitignore
+wget https://raw.githubusercontent.com/github/gitignore/master/C%2B%2B.gitignore
+wget https://raw.githubusercontent.com/github/gitignore/master/C.gitignore
+wget https://raw.githubusercontent.com/github/gitignore/master/CMake.gitignore
+wget https://raw.githubusercontent.com/github/gitignore/master/Global/Matlab.gitignore
+wget https://raw.githubusercontent.com/github/gitignore/master/Global/ModelSim.gitignore
+wget https://raw.githubusercontent.com/github/gitignore/master/Global/XilinxISE.gitignore
+wget https://raw.githubusercontent.com/github/gitignore/master/Global/Xcode.gitignore
+wget https://raw.githubusercontent.com/github/gitignore/master/Global/macOS.gitignore
+wget https://raw.githubusercontent.com/github/gitignore/master/Global/SublimeText.gitignore
+wget https://raw.githubusercontent.com/github/gitignore/master/Global/SynopsysVCS.gitignore
+wget https://raw.githubusercontent.com/github/gitignore/master/Global/Tags.gitignore
+wget https://raw.githubusercontent.com/github/gitignore/master/Global/Vim.gitignore
+\rm -rf ~/.global.gitignore
+\cat *.gitignore > ~/.global.gitignore
+git config --global core.excludesfile ~/.global.gitignore
+
 
