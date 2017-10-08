@@ -16,7 +16,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-repeat'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
 Plugin 'Townk/vim-autoclose'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -27,6 +27,7 @@ Plugin 'vhda/verilog_systemverilog.vim'
 Plugin 'Yggdroot/indentLine'
 Plugin 'nvie/vim-flake8'
 Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'gilligan/vim-lldb'
 
 "Color schemes
 Plugin 'chriskempson/base16-vim'
@@ -102,11 +103,11 @@ set expandtab " no real tabs please!
 set nowrap " do not wrap lines  
 
 """"""""""""""""""""""""""""""""""""""
-"" Autotag setting
+"" Tag navigation 
 """"""""""""""""""""""""""""""""""""""
-let g:autotagCtagsCmd="ctags"
-let g:autotagTagsFile=".tags"
 noremap <C-[>           :pop<CR>
+
+runtime marcos/matchit.vim
 
 """"""""""""""""""""""""""""""""""""""
 "" Python setting
