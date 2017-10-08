@@ -25,16 +25,19 @@ Plugin 'honza/vim-snippets'
 Plugin 'garbas/vim-snipmate'
 Plugin 'vhda/verilog_systemverilog.vim'
 Plugin 'Yggdroot/indentLine'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'dracula/vim'
+Plugin 'nvie/vim-flake8'
+
+# Color schemes
+Plugin 'chriskempson/base16-vim'
+#Plugin 'altercation/vim-colors-solarized'
+#Plugin 'dracula/vim'
 "Plugin 'vim-scripts/phd'
 "Plugin 'junegunn/seoul256.vim'
-Plugin 'romainl/Apprentice'
+"Plugin 'romainl/Apprentice'
 "Plugin 'morhetz/gruvbox'
 "Plugin 'tomasr/molokai'
-Plugin 'chriskempson/base16-vim'
-Plugin 'nvie/vim-flake8'
-"Plugin 'w0rp/ale'
+
+"Plugin 'w0rp/ale' # Async lint engine for Vim 8.0 only
 call vundle#end()
 
 " To get plugins from Vim Scripts, you can reference the plugin
