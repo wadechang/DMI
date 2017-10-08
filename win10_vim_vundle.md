@@ -1,9 +1,9 @@
-# vim
+# Install Vim with Vundle with Windows 10
 
-How to install Vundle on Windows 10:
+How to install Vim with Vundle on Windows 10:
 1. Install Vim
    * Download link: https://vim.sourceforge.io/download.php#pc
-   * $VIM is where your vim is installed. Normally it's "c:\Program Files (x86)\Vim". However, it's better to have your vim installed at "c:\vim" to avoid permission issues.
+   * $VIM is where your vim is installed. Normally it's "c:\Program Files (x86)\Vim". However, it's better to have your vim installed at "c:\vim" to avoid possible permission issues.
    
 2. Install git Windows version
    * Download link: https://git-scm.com/downloads
