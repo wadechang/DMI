@@ -1,7 +1,8 @@
 cd /tmp
 # Install the basics
-sudo apt-get update upgrade
-sudo apt-get install vim vim-gnome git curl llvm lldb clang
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install vim vim-gnome git curl llvm lldb clang python-pip
 
 # Install Visual Studio Code
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
@@ -55,4 +56,6 @@ wget https://raw.githubusercontent.com/wadechang/DMI/master/bash_aliases -O ~/.b
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 wget https://raw.githubusercontent.com/wadechang/DMI/master/vimrc -O ~/.vimrc
 vim +PluginInstall +qall
+
+# Install pip
 
