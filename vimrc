@@ -26,8 +26,9 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'vhda/verilog_systemverilog.vim'
 Plugin 'Yggdroot/indentLine'
 Plugin 'nvie/vim-flake8'
+Plugin 'ludovicchabant/vim-gutentags'
 
-# Color schemes
+"Color schemes
 Plugin 'chriskempson/base16-vim'
 "Plugin 'altercation/vim-colors-solarized'
 "Plugin 'dracula/vim'
@@ -101,8 +102,11 @@ set expandtab " no real tabs please!
 set nowrap " do not wrap lines  
 
 """"""""""""""""""""""""""""""""""""""
-"" Folding
+"" Autotag setting
 """"""""""""""""""""""""""""""""""""""
+let g:autotagCtagsCmd="ctags"
+let g:autotagTagsFile=".tags"
+noremap <C-[>           :pop<CR>
 
 """"""""""""""""""""""""""""""""""""""
 "" Python setting

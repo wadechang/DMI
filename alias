@@ -1,9 +1,11 @@
 alias ls='ls --color=auto'
+alias rm='rm -i'
 alias g='gvim -p'
 alias c='clear'
 alias q='exit'
 alias h='history'
 alias chrome='google-chrome'
 alias gs='git status'
-alias rm='rm -i'
+alias gd='git difftool --tool=meld -y'
+alias gd='git difftool --tool=meld -d'
 

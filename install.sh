@@ -51,9 +51,14 @@ wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-com
 wget https://raw.githubusercontent.com/wadechang/DMI/master/git-promot.bash -O ~/.git-prompt.bash
 wget https://raw.githubusercontent.com/wadechang/DMI/master/alias -O ~/.alias
 wget https://raw.githubusercontent.com/wadechang/DMI/master/bash_aliases -O ~/.bash_aliases
+wget https://raw.githubusercontent.com/wadechang/DMI/master/ctags -O ~/.ctags
 
 # Install Vundle for Vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 wget https://raw.githubusercontent.com/wadechang/DMI/master/vimrc -O ~/.vimrc
 vim +PluginInstall +qall
+
+# Set git global ignore file
+echo "tags" >> ~/.global_ignore
+git config --global core.excludesfile ~/.global_ignore
 
