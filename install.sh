@@ -1,6 +1,6 @@
 cd /tmp
 # Install the basics
-sudo apt-get update
+sudo apt-get update upgrade
 sudo apt-get install vim vim-gnome git curl llvm lldb clang meld pip
 
 # Install Visual Studio Code
@@ -44,16 +44,15 @@ curl -sf -L https://static.rust-lang.org/rustup.sh | sh
 curl -O https://repo.continuum.io/archive/Anaconda3-5.0.0-Linux-x86_64.sh
 bash Anaconda3-5.0.0-Linux-x86_64.sh
 
-# Install Vundle for Vim
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
 # Install personal settings
 \rm -rf ~/.git-completion.bash ~/.git-prompt.bash ~/.vimrc ~/.alias ~/.bash_profile
-wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash ~/.git-completion.bash
-wget https://raw.githubusercontent.com/wadechang/DMI/master/git-promot.bash ~/.git-prompt.bash
-wget https://raw.githubusercontent.com/wadechang/DMI/master/vimrc ~/.vimrc
-wget https://raw.githubusercontent.com/wadechang/DMI/master/alias ~/.alias
-wget https://raw.githubusercontent.com/wadechang/DMI/master/bash_profile ~/.bash_profile
+wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/.git-completion.bash
+wget https://raw.githubusercontent.com/wadechang/DMI/master/git-promot.bash -O ~/.git-prompt.bash
+wget https://raw.githubusercontent.com/wadechang/DMI/master/alias -O ~/.alias
+wget https://raw.githubusercontent.com/wadechang/DMI/master/bash_profile -O ~/.bash_profile
 
+# Install Vundle for Vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+wget https://raw.githubusercontent.com/wadechang/DMI/master/vimrc -O ~/.vimrc
 vim +PluginInstall +qall
 
