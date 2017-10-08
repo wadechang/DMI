@@ -49,7 +49,7 @@ bash Anaconda3-5.0.0-Linux-x86_64.sh
 wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/.git-completion.bash
 wget https://raw.githubusercontent.com/wadechang/DMI/master/git-promot.bash -O ~/.git-prompt.bash
 wget https://raw.githubusercontent.com/wadechang/DMI/master/alias -O ~/.alias
-wget https://raw.githubusercontent.com/wadechang/DMI/master/bash_profile -O ~/.bash_profile
+wget https://raw.githubusercontent.com/wadechang/DMI/master/bash_aliases -O ~/.bash_aliases
 
 # Install Vundle for Vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
