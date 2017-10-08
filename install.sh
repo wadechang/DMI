@@ -2,7 +2,7 @@ cd /tmp
 # Install the basics
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install vim vim-gnome git curl llvm lldb clang python-pip
+sudo apt-get install vim vim-gnome git curl llvm lldb clang python-pip meld
 
 # Install Visual Studio Code
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
