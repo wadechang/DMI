@@ -48,11 +48,11 @@ bash Anaconda3-5.0.0-Linux-x86_64.sh
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # Install personal settings
-wget https://github.com/git/git/blob/master/contrib/completion/git-completion.bash ~/.git-prompt.bash
-wget https://github.com/wadechang/DMI/blob/master/vimrc ~/.vimrc
-wget https://github.com/wadechang/DMI/blob/master/alias ~/.alias
-wget https://github.com/wadechang/DMI/blob/master/git-prompt.bash ~/.git-prompt.bash
-wget https://github.com/wadechang/DMI/blob/master/bach_profile ~/.bash_profile
+wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash ~/.git-prompt.bash
+wget https://raw.githubusercontent.com/wadechang/DMI/master/vimrc ~/.vimrc
+wget https://raw.githubusercontent.com/wadechang/DMI/blob/master/alias ~/.alias
+wget https://raw.githubusercontent.com/wadechang/DMI/blob/master/git-prompt.bash ~/.git-prompt.bash
+wget https://raw.githubusercontent.com/wadechang/DMI/blob/master/bach_profile ~/.bash_profile
 
 vim +PluginInstall +qall
 
