@@ -25,10 +25,18 @@ Plugin 'honza/vim-snippets'
 Plugin 'garbas/vim-snipmate'
 Plugin 'vhda/verilog_systemverilog.vim'
 Plugin 'Yggdroot/indentLine'
+" Python syntax checking
 Plugin 'nvie/vim-flake8'
-Plugin 'ludovicchabant/vim-gutentags'
+" lldb plugin
 Plugin 'gilligan/vim-lldb'
-
+" Automatic ctag generation
+Plugin 'ludovicchabant/vim-gutentags'
+" Async lint engine. Support 8.0 only. Very slow
+"Plugin 'w0rp/ale'
+" increase search
+Plugin 'haya14busa/incsearch.vim'
+Plugin 'haya14busa/incsearch-easymotion.vim'
+Plugin 'haya14busa/incsearch-fuzzy.vim'
 "Color schemes
 Plugin 'chriskempson/base16-vim'
 "Plugin 'altercation/vim-colors-solarized'
@@ -39,7 +47,6 @@ Plugin 'chriskempson/base16-vim'
 "Plugin 'morhetz/gruvbox'
 "Plugin 'tomasr/molokai'
 
-"Plugin 'w0rp/ale' # Async lint engine for Vim 8.0 only
 call vundle#end()
 
 " To get plugins from Vim Scripts, you can reference the plugin
@@ -105,9 +112,22 @@ set nowrap " do not wrap lines
 """"""""""""""""""""""""""""""""""""""
 "" Tag navigation 
 """"""""""""""""""""""""""""""""""""""
-noremap <C-[>           :pop<CR>
+noremap <a-right>       
+noremap <a-left>        :pop<CR>
 
-runtime marcos/matchit.vim
+""""""""""""""""""""""""""""""""""""""
+"" Increase search
+""""""""""""""""""""""""""""""""""""""
+let g:incsearch#auto_nohlsearch = 1
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
 
 """"""""""""""""""""""""""""""""""""""
 "" Python setting
@@ -123,13 +143,13 @@ noremap gg                      1G " Go to the first line
 
 " Tab control
 noremap <C-T>           :tabnew<CR>
-nmap            <C-S-tab>       :tabprevious<CR>
-nmap            <C-tab>         :tabnext<CR>
-map                     <C-S-tab>       :tabprevious<CR>
-map                     <C-tab>         :tabnext<CR>
-imap            <C-S-tab>       <ESC>:tabprevious<CR>
-imap            <C-tab> <ESC>:tabnext<CR>
-imap            <C-t>   <ESC>:tabnew<CR>
+nmap    <C-S-tab>       :tabprevious<CR>
+nmap    <C-tab>         :tabnext<CR>
+map     <C-S-tab>       :tabprevious<CR>
+map     <C-tab>         :tabnext<CR>
+imap    <C-S-tab>       <ESC>:tabprevious<CR>
+imap    <C-tab>         <ESC>:tabnext<CR>
+imap    <C-t>           <ESC>:tabnew<CR>
 
 
 if has("gui_macvim")
