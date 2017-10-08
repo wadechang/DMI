@@ -2,7 +2,7 @@ cd /tmp
 # Install the basics
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install vim vim-gnome git curl llvm lldb clang python-pip meld ctags
+sudo apt-get install git curl llvm lldb clang python-pip meld ctags
 
 # Install Visual Studio Code
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
@@ -84,4 +84,7 @@ wget https://raw.githubusercontent.com/github/gitignore/master/Global/Vim.gitign
 \cat *.gitignore > ~/.global.gitignore
 git config --global core.excludesfile ~/.global.gitignore
 
-
+# Install vim 8.0
+sudo add-apt-repository ppa:jonathonf/vim
+sudo apt update
+sudo apt install vim vim-gtk
