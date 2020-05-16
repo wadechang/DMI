@@ -2,14 +2,16 @@ cd /tmp
 # Install the basics
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install git curl llvm lldb clang python-pip meld ctags gdebi-core wget
+sudo apt-get install git curl llvm lldb clang meld ctags gdebi-core wget python3-pip
 
 # Install Visual Studio Code
-sudo snap install --classic code # or code-insiders
+sudo snap install --classic code
 
 #Install Google Chrome
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo gdebi google-chrome-stable_current_amd64.deb
+wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+sudo apt update
+sudo apt install google-chrome-stable
 
 # Install Node.js 
 sudo apt install nodejs npm
@@ -38,6 +40,7 @@ wget https://raw.githubusercontent.com/wadechang/DMI/master/bash_aliases -O ~/.b
 wget https://raw.githubusercontent.com/wadechang/DMI/master/ctags -O ~/.ctags
 
 # Install Vundle for Vim
+sudo apt install vim vim-gtk3
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 wget https://raw.githubusercontent.com/wadechang/DMI/master/vimrc -O ~/.vimrc
 vim +PluginInstall +qall
@@ -65,6 +68,3 @@ wget https://raw.githubusercontent.com/github/gitignore/master/Global/Vim.gitign
 \cat *.gitignore > ~/.global.gitignore
 git config --global core.excludesfile ~/.global.gitignore
 
-# Install vim 8.0
-sudo apt update
-sudo apt-get install vim-gtk3
