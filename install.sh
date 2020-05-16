@@ -2,29 +2,32 @@ cd /tmp
 # Install the basics
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install git curl llvm lldb clang python-pip meld ctags
+sudo apt-get install git curl llvm lldb clang python-pip meld ctags gdebi-core wget
 
 # Install Visual Studio Code
 sudo snap install --classic code # or code-insiders
 
 #Install Google Chrome
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
-sudo apt-get update
-sudo apt-get install google-chrome-stable
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo gdebi google-chrome-stable_current_amd64.deb
 
 # Install Node.js 
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-sudo apt-get install -y nodejs
+sudo apt install nodejs npm
 
 # Install Rails 5
-\curl -L https://get.rvm.io | bash -s stable --ruby
+sudo apt install ruby rails
 
 # Install Go Lang
 sudo apt-get install golang-go
 
 # Install Rust
-curl -sf -L https://static.rust-lang.org/rustup.sh | sh
+sudo apt install rustc
+
+# Install Elixir
+wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb && sudo dpkg -i erlang-solutions_2.0_all.deb
+sudo apt-get update
+sudo apt-get install esl-erlang
+sudo apt-get install elixir
 
 # Install personal settings
 \rm -rf ~/.git-completion.bash ~/.git-prompt.bash ~/.vimrc ~/.alias ~/.bash_profile
@@ -54,16 +57,8 @@ wget https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore
 wget https://raw.githubusercontent.com/github/gitignore/master/Objective-C.gitignore
 wget https://raw.githubusercontent.com/github/gitignore/master/Python.gitignore
 wget https://raw.githubusercontent.com/github/gitignore/master/Rails.gitignore
-wget https://raw.githubusercontent.com/github/gitignore/master/C%2B%2B.gitignore
 wget https://raw.githubusercontent.com/github/gitignore/master/C.gitignore
 wget https://raw.githubusercontent.com/github/gitignore/master/CMake.gitignore
-wget https://raw.githubusercontent.com/github/gitignore/master/Global/Matlab.gitignore
-wget https://raw.githubusercontent.com/github/gitignore/master/Global/ModelSim.gitignore
-wget https://raw.githubusercontent.com/github/gitignore/master/Global/XilinxISE.gitignore
-wget https://raw.githubusercontent.com/github/gitignore/master/Global/Xcode.gitignore
-wget https://raw.githubusercontent.com/github/gitignore/master/Global/macOS.gitignore
-wget https://raw.githubusercontent.com/github/gitignore/master/Global/SublimeText.gitignore
-wget https://raw.githubusercontent.com/github/gitignore/master/Global/SynopsysVCS.gitignore
 wget https://raw.githubusercontent.com/github/gitignore/master/Global/Tags.gitignore
 wget https://raw.githubusercontent.com/github/gitignore/master/Global/Vim.gitignore
 \rm -rf ~/.global.gitignore
@@ -71,6 +66,5 @@ wget https://raw.githubusercontent.com/github/gitignore/master/Global/Vim.gitign
 git config --global core.excludesfile ~/.global.gitignore
 
 # Install vim 8.0
-sudo add-apt-repository ppa:jonathonf/vim
 sudo apt update
-sudo apt install vim vim-gtk
+sudo apt-get install vim-gtk3
