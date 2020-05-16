@@ -36,10 +36,6 @@ sudo apt-get install golang-go
 # Install Rust
 curl -sf -L https://static.rust-lang.org/rustup.sh | sh
 
-# Install Anaconda 5.0.0
-curl -O https://repo.continuum.io/archive/Anaconda3-5.0.0-Linux-x86_64.sh
-bash Anaconda3-5.0.0-Linux-x86_64.sh
-
 # Install personal settings
 \rm -rf ~/.git-completion.bash ~/.git-prompt.bash ~/.vimrc ~/.alias ~/.bash_profile
 wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/.git-completion.bash
