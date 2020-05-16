@@ -5,7 +5,7 @@ sudo apt-get upgrade
 sudo apt-get install git curl llvm lldb clang meld ctags gdebi-core wget python3-pip
 
 # Install Visual Studio Code
-sudo snap install --classic code
+sudo snap install --classic code-insiders
 
 #Install Google Chrome
 wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
